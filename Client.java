@@ -19,3 +19,12 @@ while(flag)
       clientSocket.send(sendPacket);
       DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
       clientSocket.receive(receivePacket);
+ String modifiedSentence = new String(receivePacket.getData());
+      System.out.println("FROM SERVER:" + modifiedSentence);
+       if(sentence.equals("bye"))
+        flag=false;
+      }
+        clientSocket.close();
+   }
+
+}
