@@ -16,3 +16,5 @@ class UDPServer
                   System.out.println("RECEIVED: " + sentence);
                   InetAddress IPAddress = receivePacket.getAddress();
                   int port = receivePacket.getPort();
+ String capitalizedSentence = sentence.toUpperCase();
+                  sendData = capitalizedSentence.getBytes();
